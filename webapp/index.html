@@ -11,11 +11,15 @@ src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
 data-sap-ui-theme="sap_bluecrystal"
 data-sap-ui-libs="sap.m"
 data-sap-ui-compatVersion="edge"
-data-sap-ui-preload="async">
+data-sap-ui-preload="async"
+data-sap-ui-resourceroots='{"kr.ui5_tutorials" : "./"}'>
 </script>
+
 <script>
 sap.ui.getCore().attachInit(function () {
-alert("SAPUI5 is ready");
+sap.ui.xmlview({
+	viewName : "kr.ui5_tutorials.view.App"
+}).placeAt("content");
 });
 </script>
 
