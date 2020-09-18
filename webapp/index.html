@@ -18,16 +18,9 @@ data-sap-ui-resourceroots='{"kr.ui5_tutorials" : "./"}'>
 
 <script>
 sap.ui.getCore().attachInit(function () {
-sap.ui.xmlview({
-	viewName : "kr.ui5_tutorials.view.App"
-}).placeAt("content");
+new sap.ui.core.ComponentContainer({
+				name : "kr.ui5_tutorials"
+			}).placeAt("content");
+
 });
 </script>
-
-</head>
-<body class="sapUiBody" id="content">
-</body>
-
-</html>
-=======
->>>>>>> 75a1188 Index updated with first unit exercise
