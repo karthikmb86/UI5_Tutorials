@@ -1,5 +1,9 @@
 <!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Karthik (Unix) -->
-<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+<mvc:View 
+displayBlock="true" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m"
+controllerName="kr.ui5_tutorials.controller.App">
 	<Carousel class="sapUiContentPadding" loop="true">
 		<pages>
 			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
@@ -10,3 +14,4 @@
 		<Button text="Hello" press="onPress"/>
 	<!--<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg"></Image>-->
 </mvc:View>
+ 
