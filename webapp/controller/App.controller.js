@@ -5,4 +5,4 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 	 		MessageToast.show("Hello");
 	 	}
 	});
-	});
+	}); 
