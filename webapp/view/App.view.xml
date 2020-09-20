@@ -1,28 +1,72 @@
-<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Karthik (Unix) -->
-<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-	<Carousel class="sapUiContentPadding" loop="true">
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Karthik (ABC Corp) -->
+<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="kr.ui5_tutorials.controller.App" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
 		<pages>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
+			<Page title="My First App">
+				<content>
+					<IconTabBar id="idTopLevelIconTabBar" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter id="start" text="{i18n>gettingStartedFilter}">
+								<Carousel class="sapUiContentPadding" loop="true">
+									<pages>
+										<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
+										<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
+									</pages>
+									<pages>
+										<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
+										<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
+										<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
+									</pages>
+								</Carousel>
+								<Button text="{i18n>showHelloButtonText}" press="onPress"/>
+								<Input value="{helloPanel>/recipient/name}" description="Hello {helloPanel>/recipient/name}" valueLiveUpdate="true" width="60%"/>
+							</IconTabFilter>
+							<IconTabFilter id="layouts" text="{i18n>layoutFilter}">
+								<MessageStrip type="Information" showIcon="true" text="Here's a Form Layout inside an Icon Tab Bar …"/>
+								<!--<core:Icon src="sap-icon://hello-world" size="8rem"/>-->
+								<f:SimpleForm id="simpleFormChange" title="Address" editable="true" class="editableForm sapUiSmallMarginTopBottom">
+									<f:content>
+										<Label text="{i18n>layoutFormName}"/>
+										<Input value="{address>/Name}"/>
+										<Label text="{i18n>layoutFormStreet}"/>
+										<Input value="{address>/Street}"/>
+										<Label text="{i18n>layoutFormHouseNumber}"/>
+										<Input value="{address>/HouseNumber}"/>
+										<Label text="{i18n>layoutFormZIPCode}"/>
+										<Input value="{address>/ZIPCode}"/>
+										<Label text="{i18n>layoutFormCity}"/>
+										<Input value="{address>/City}"/>
+										<Label text="{i18n>layoutFormCountry}"/>
+										<Select>
+											<items>
+												<core:Item text="{i18n>layoutCountryGermany}"/>
+												<core:Item text="{i18n>layoutCountryUSA}"/>
+												<core:Item text="{i18n>layoutCountryEngland}"/>
+											</items>
+										</Select>
+									</f:content>
+								</f:SimpleForm>
+								<Toolbar class="sapUiSmallMarginTopBottom">
+									<ToolbarSpacer/>
+									<Button text="{i18n>layoutPublishButton}" type="Accept" icon="sap-icon://outbox"/>
+									<Button text="{i18n>layoutDraftButton}" icon="sap-icon://save"/>
+								</Toolbar>
+							</IconTabFilter>
+							<IconTabFilter id="databinding" key="db" text="Data Binding">
+									<List headerText="Orders" items="{/YY1_SalesHistoryOld}">
+										<items>
+										<ObjectListItem
+								title="{SalesOrder}"
+								number="{SalesOrganization}"
+								intro="{DistributionChannel}" />
+										</items>
+									</List>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
 		</pages>
-		<pages>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-		</pages> 
-		<pages>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-		</pages>
-		<pages>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-			<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg" alt="Example picture of speakers"/>
-		</pages>
-	</Carousel>
-	<!--<Image src="https://i.ibb.co/6rzz9Kn/191120053137-03-milky-way-images-australia-large-169.jpg"></Image>-->
+	</App>
 </mvc:View>

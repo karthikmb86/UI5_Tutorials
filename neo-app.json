@@ -1,0 +1,33 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "version": "snapshot",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+		{
+			"path": "/destinations/S4DeloitteDemo",
+			"target": {
+				"type": "destination",
+					"name": "S4DeloitteDemo"
+					},
+			"description": "S4C Demo Service"
+		}
+
+  ]
+}
